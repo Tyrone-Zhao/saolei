@@ -205,7 +205,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# rm -rf build dist && pyinstaller -w -i saolei.ico -F minesweeper.py
-# rm -rf build dist && pyinstaller xxxx.spec
