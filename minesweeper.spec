@@ -1,0 +1,57 @@
+# -*- mode: python -*-
+
+block_cipher = None
+
+
+a = Analysis(['minesweeper.py'],
+             pathex=['/Users/zhaojunyu/Library/Mobile Documents/com~apple~CloudDocs/study/python/python_project/扫雷'],
+             binaries=[],
+             datas=[
+                ('./resources/0.bmp', 'resources'),
+                ('./resources/1.bmp', 'resources'),
+                ('./resources/2.bmp', 'resources'),
+                ('./resources/3.bmp', 'resources'),
+                ('./resources/4.bmp', 'resources'),
+                ('./resources/5.bmp', 'resources'),
+                ('./resources/6.bmp', 'resources'),
+                ('./resources/7.bmp', 'resources'),
+                ('./resources/8.bmp', 'resources'),
+                ('./resources/a.TTF', 'resources'),
+                ('./resources/ask.bmp', 'resources'),
+                ('./resources/blank.bmp', 'resources'),
+                ('./resources/blood.bmp', 'resources'),
+                ('./resources/error.bmp', 'resources'),
+                ('./resources/face_fail.bmp', 'resources'),
+                ('./resources/face_normal.bmp', 'resources'),
+                ('./resources/face_success.bmp', 'resources'),
+                ('./resources/flag.bmp', 'resources'),
+                ('./resources/mine.bmp', 'resources'),
+                ('./saolei.ico', '.'),
+             ],
+             hiddenimports=[],
+             hookspath=[],
+             runtime_hooks=[],
+             excludes=[],
+             win_no_prefer_redirects=False,
+             win_private_assemblies=False,
+             cipher=block_cipher,
+             noarchive=False)
+pyz = PYZ(a.pure, a.zipped_data,
+             cipher=block_cipher)
+exe = EXE(pyz,
+          a.scripts,
+          a.binaries,
+          a.zipfiles,
+          a.datas,
+          [],
+          name='saolei',
+          debug=False,
+          bootloader_ignore_signals=False,
+          strip=False,
+          upx=True,
+          runtime_tmpdir=None,
+          console=False , icon='saolei.ico')
+app = BUNDLE(exe,
+             name='saolei.app',
+             icon='saolei.ico',
+             bundle_identifier=None)
