@@ -4,10 +4,10 @@ block_cipher = None
 
 
 a = Analysis(['minesweeper.py'],
-             pathex=['E:\\code\\Github\\saolei'],
+             pathex=['/Users/zhaojunyu/Library/Mobile Documents/com~apple~CloudDocs/study/python/python_project/扫雷'],
              binaries=[],
              datas=[
-                 ('./resources/0.bmp', 'resources'),
+                ('./resources/0.bmp', 'resources'),
                 ('./resources/1.bmp', 'resources'),
                 ('./resources/2.bmp', 'resources'),
                 ('./resources/3.bmp', 'resources'),
@@ -51,3 +51,7 @@ exe = EXE(pyz,
           upx=True,
           runtime_tmpdir=None,
           console=False , icon='saolei.ico')
+app = BUNDLE(exe,
+             name='saolei.app',
+             icon='saolei.ico',
+             bundle_identifier=None)
